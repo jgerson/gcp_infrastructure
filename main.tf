@@ -32,7 +32,7 @@ variable "compute_instance_machine_type" {}
 //--------------------------------------------------------------------
 // Modules
 module "compute_instance" {
-  source  = "app.terraform.io/RogerBerlind/compute-instance/google"
+  source  = "app.terraform.io/jgersonorg1/compute-instance/google"
   version = "0.1.3"
 
   count = "${var.compute_instance_count}"
@@ -44,7 +44,7 @@ module "compute_instance" {
 }
 
 module "network_firewall" {
-  source  = "app.terraform.io/RogerBerlind/network-firewall/google"
+  source  = "app.terraform.io/jgersonorg1/network-firewall/google"
   version = "0.1.5"
 
   description = "Citi Demo Firewall Rule"
@@ -57,7 +57,7 @@ module "network_firewall" {
 }
 
 module "network_subnet" {
-  source  = "app.terraform.io/RogerBerlind/network-subnet/google"
+  source  = "app.terraform.io/jgersonorg1/network-subnet/google"
   version = "0.1.2"
 
   description = "Citi Demo Subnet"
@@ -67,7 +67,7 @@ module "network_subnet" {
 }
 
 module "network" {
-  source  = "app.terraform.io/RogerBerlind/network/google"
+  source  = "app.terraform.io/jgersonorg1/network/google"
   version = "0.1.3"
 
   auto_create_subnetworks = "false"
